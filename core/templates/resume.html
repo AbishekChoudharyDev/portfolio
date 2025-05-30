@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container py-5 text-center">
+  <h2 class="mb-4">My Resume</h2>
+
+  <!-- Download Button -->
+  <a href="{% static 'pdf/Abishek-Kumar-Choudhary-cv.pdf' %}" 
+     class="btn btn-primary mb-4" 
+     download>
+     Download Resume
+  </a>
+
+  <!-- Embedded Resume Preview -->
+  <div class="ratio ratio-4x3">
+    <iframe src="{% static 'pdf/Abishek-Kumar-Choudhary-cv.pdf' %}" 
+            title="Abishek Kumar Resume" 
+            frameborder="0">
+    </iframe>
+  </div>
+</div>
+
+{% endblock %}

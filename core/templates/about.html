@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- AOS Animation CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<div class="container py-5">
+
+  <!-- About + Internship -->
+  <div class="row align-items-start mb-5">
+    <div class="col-md-6 mb-4" data-aos="fade-up">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body">
+          <h2 class="text-primary mb-3">About Me</h2>
+          <p>
+            👋 I'm <strong>Abishek Kumar Choudhary</strong>, a passionate <strong>Full-Stack Developer</strong> with experience building scalable web apps using modern technologies.
+          </p>
+          <p>I thrive on problem-solving, rapid learning, and clean code.</p>
+          <ul class="list-unstyled">
+            <li>🌍 <strong>Location:</strong> Hyderabad, India</li>
+            <li>🗣 <strong>Languages:</strong> English, Hindi, Telugu</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6" data-aos="fade-left">
+      <div class="card border-0 shadow-sm h-100 bg-light">
+        <div class="card-body">
+          <h3 class="text-primary mb-3">Internship Experience</h3>
+          <p><strong>Python Full Stack Developer Intern</strong></p>
+          <p class="text-muted">RamanaSoft Tech <br> <small>(Feb 2025 – May 2025)</small></p>
+          <ul>
+            <li>🔧 Built scalable features using Django.</li>
+            <li>🛒 Contributed to an e-commerce app (admin/user panels).</li>
+            <li>🤝 Worked in Agile sprints with daily standups.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="mb-5" data-aos="fade-up">
+    <h3 class="text-center text-primary mb-4">Technical Skills</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-1">Python</p>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" style="width: 80%">80%</div>
+        </div>
+
+        <p class="mb-1">Django</p>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-info" style="width: 80%">80%</div>
+        </div>
+
+        <p class="mb-1">HTML/CSS</p>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-primary" style="width: 85%">85%</div>
+        </div>
+
+        <p class="mb-1">MySql</p>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-secondary" style="width: 80%">80%"</div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <p class="mb-1">JavaScript</p>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-warning" style="width: 70%">70%</div>
+        </div>
+
+        <p class="mb-1">Bootstrap</p>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-secondary" style="width: 90%">90%</div>
+        </div>
+
+        <p class="mb-1">Git & GitHub</p>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-dark" style="width: 85%">85%</div>
+        </div>
+
+        
+
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated Counters -->
+  <div class="row text-center py-5 bg-light rounded shadow-sm" data-aos="fade-up">
+    <div class="col-md-4">
+      <h2 class="text-primary counter" data-count="7">7</h2>
+      <p>Completed Projects</p>
+    </div>
+    <div class="col-md-4">
+      <h2 class="text-primary counter" data-count="8">8</h2>
+      <p>Technologies Mastered</p>
+    </div>
+    <div class="col-md-4">
+      <h2 class="text-primary counter" data-count="6">0</h2>
+      <p>Months of Experience</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- AOS + Counter Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  // Counter animation
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-count');
+        const count = +counter.innerText;
+        const speed = 20;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + (target - count) / speed);
+          setTimeout(updateCount, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  });
+</script>
+
+{% endblock %}

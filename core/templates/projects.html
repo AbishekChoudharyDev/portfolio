@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- AOS Animation CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<div class="container py-5">
+  <h2 class="text-center text-primary mb-5" data-aos="fade-down">My Projects</h2>
+
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    
+    <!-- E-Commerce Project -->
+    <div class="col" data-aos="fade-up">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">🛒 E-Commerce Platform</h5>
+          <span class="badge bg-success mb-2">Internship Project (Team)</span>
+          <p class="card-text">A full-featured e-commerce site with user authentication, product CRUD, cart, dark/light mode, and REST APIs.</p>
+          <div class="mb-3">
+            <span class="badge bg-secondary">Django</span>
+            <span class="badge bg-secondary">Bootstrap</span>
+            <span class="badge bg-secondary">REST API</span>
+          </div>
+          
+          <a href="#" class="btn btn-sm btn-outline-dark" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTT and News App -->
+    <div class="col" data-aos="fade-up" data-aos-delay="100">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">🎬 OTT & News App</h5>
+          <span class="badge bg-info mb-2">Individual Project</span>
+          <p class="card-text">A practice project that mimics a mini OTT app with an integrated news section. Focused on frontend display and routing.</p>
+          <div class="mb-3">
+            <span class="badge bg-secondary">Django</span>
+            <span class="badge bg-secondary">HTML/CSS</span>
+          </div>
+          
+          <a href="#" class="btn btn-sm btn-outline-dark" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Student & Employee Manager -->
+    <div class="col" data-aos="fade-up" data-aos-delay="200">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">👥 Student & Employee Manager</h5>
+          <span class="badge bg-info mb-2">Individual Project</span>
+          <p class="card-text">A CRUD app using Django Admin and custom views for managing students and employees. Role-based functionality included.</p>
+          <div class="mb-3">
+            <span class="badge bg-secondary">Django</span>
+            <span class="badge bg-secondary">Admin Panel</span>
+            <span class="badge bg-secondary">CRUD</span>
+          </div>
+          
+          <a href="#" class="btn btn-sm btn-outline-dark" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Food Delivery App -->
+    <div class="col" data-aos="fade-up" data-aos-delay="300">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">🍽 Food Delivery App</h5>
+          <span class="badge bg-info mb-2">Individual Project</span>
+          <p class="card-text">A food ordering system with menu listings, search, order tracking, and pagination. Built with Django and Bootstrap.</p>
+          <div class="mb-3">
+            <span class="badge bg-secondary">Django</span>
+            <span class="badge bg-secondary">Bootstrap</span>
+            <span class="badge bg-secondary">Pagination</span>
+          </div>
+          
+          <a href="#" class="btn btn-sm btn-outline-dark" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal Portfolio -->
+    <div class="col" data-aos="fade-up" data-aos-delay="400">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h5 class="card-title">🌐 Personal Portfolio Website</h5>
+          <span class="badge bg-info mb-2">Individual Project</span>
+          <p class="card-text">A responsive portfolio to showcase my journey, projects, and skills. Built with Django templates, styled with Bootstrap, and animated using AOS.</p>
+          <div class="mb-3">
+            <span class="badge bg-secondary">Django</span>
+            <span class="badge bg-secondary">Bootstrap</span>
+            <span class="badge bg-secondary">AOS</span>
+            <span class="badge bg-secondary">Responsive Design</span>
+          </div>
+          
+          <a href="#" class="btn btn-sm btn-outline-dark" target="_blank">💻 GitHub</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- AOS Animation Script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+{% endblock %}
